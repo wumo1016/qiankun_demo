@@ -5,37 +5,35 @@
 
 ```
 # qiankun_demo 项目
-	server {
-		listen       8003;
-        server_name  localhost;
+server {
+	listen       8003;
+  server_name  localhost;
 
-        location / {
-            root   html/qiankun;
-            index  index.html;
-			try_files $uri $uri/ /index.html;
-        }
-		location /qiankun_vue1 {
-            alias   html/qiankun_vue1;
-            index  index.html;
-			try_files $uri $uri/ /index.html;
-        }
-		location /vue1 {
-            alias   html/qiankun;
-            index  index.html;
-			try_files $uri $uri/ /index.html;
-        }
-		
-	}
-	server {
-		listen       8004;
-        server_name  localhost;
-
-        location / {
-            root   html/qiankun_vue1;
-            index  index.html;
-			try_files $uri $uri/ /index.html;
-		    add_header Access-Control-Allow-Origin *;
-        }
-	}
+  location / {
+    root html/qiankun;
+    index  index.html;
+		try_files $uri $uri/ /index.html;
+  }
+	location /qiankun_vue1 {
+    alias html/qiankun_vue1;
+    index index.html;
+		try_files $uri $uri/ /index.html;
+  }
+	location /vue1 {
+    alias html/qiankun;
+    index index.html;
+		try_files $uri $uri/ /index.html;
+  }
+}	
+server {
+	listen 8004;
+  server_name  localhost;
+  location / {
+    root   html/qiankun_vue1;
+    index  index.html;
+		try_files $uri $uri/ /index.html;
+		add_header Access-Control-Allow-Origin *;
+  }
+}
 ```
 
