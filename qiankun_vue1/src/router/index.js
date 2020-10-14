@@ -26,7 +26,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: window.__POWERED_BY_QIANKUN__ ? 'vue1' : 'qiankun_vue1',
+  base: '/vue1',
   routes
 })
 

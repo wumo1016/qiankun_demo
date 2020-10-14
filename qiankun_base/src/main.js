@@ -19,7 +19,7 @@ import {
 const apps = [ 
   {
     name:'qiankun_vue1',
-    entry: getEnterUrl('http://localhost:8004', 'http://47.100.139.95:8003/qiankun_vue1'),
+    entry: getEnterUrl('http://localhost:8004', 'http://47.100.139.95:8004'),
     container:'#vue1',
     activeRule:'/vue1',
     props:{  }
