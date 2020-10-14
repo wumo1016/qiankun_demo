@@ -22,6 +22,7 @@
 export default {
   methods: {
     goto(path) {
+      if(this.$route.path === path) return
       this.$router.push(path);
     },
   },

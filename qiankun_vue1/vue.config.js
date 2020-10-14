@@ -1,4 +1,6 @@
 module.exports = {
+    publicPath: process.env.NODE_ENV === 'development' ? '/' : '/qiankun_vue1',
+    productionSourceMap: false,
     devServer:{
         port:8004,
         headers:{

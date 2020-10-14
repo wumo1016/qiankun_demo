@@ -6,24 +6,30 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
+const isDev = process.env.NODE_ENV === 'development'
+
+function getEnterUrl(devUrl, proUrl){
+  return isDev ? devUrl : proUrl
+}
+
 import {
   registerMicroApps,
   start
 } from 'qiankun';
 const apps = [ 
   {
-    name:'qiankun_vue1', // 应用的名字
-    entry:'http://localhost:8004', // 默认会加载这个html 解析里面的js 动态的执行 （子应用必须支持跨域）fetch
-    container:'#vue1', // 容器名
-    activeRule:'/vue1', // 激活的路径
+    name:'qiankun_vue1',
+    entry: getEnterUrl('http://localhost:8004', 'http://47.100.139.95:8003/qiankun_vue1'),
+    container:'#vue1',
+    activeRule:'/vue1',
     props:{  }
   },
 ]
-registerMicroApps(apps); // 注册应用
+registerMicroApps(apps);
 
 start({
-  prefetch:false // 取消预加载
-});// 开启
+  prefetch: false // 取消预加载
+});
 
 new Vue({
   router,

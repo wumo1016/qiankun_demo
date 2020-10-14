@@ -1,4 +1,5 @@
 module.exports = {
+    productionSourceMap: false,
     devServer:{
         port:8003
     },
@@ -7,5 +8,5 @@ module.exports = {
             library:'qiankun_base',
             libraryTarget:'umd'
         }
-    }
+    },
 }
