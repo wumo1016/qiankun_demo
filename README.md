@@ -6,8 +6,8 @@
 ```
 # qiankun_demo 项目
 server {
-	listen       8003;
-  server_name  localhost;
+	listen 8003;
+  server_name localhost;
 
   location / {
     root html/qiankun;
@@ -17,12 +17,7 @@ server {
 	location /qiankun_vue1 {
     alias html/qiankun_vue1;
     index index.html;
-		try_files $uri $uri/ /index.html;
-  }
-	location /vue1 {
-    alias html/qiankun;
-    index index.html;
-		try_files $uri $uri/ /index.html;
+		try_files $uri $uri/ /qiankun_vue1/index.html;
   }
 }	
 server {
