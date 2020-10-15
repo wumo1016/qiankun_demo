@@ -1,0 +1,17 @@
+// 弹出框
+.el-dialog__wrapper {
+    overflow: hidden !important;
+    // 设置弹出框标题不可选
+    .el-dialog__title {
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+    }
+}
+
+// 表单
+.el-form {
+    .el-form-item {
+        margin-bottom: 10px;
+    }
+}

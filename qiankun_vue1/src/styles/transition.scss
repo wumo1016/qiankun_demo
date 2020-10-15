@@ -1,0 +1,15 @@
+/*translate*/
+.translate-enter {
+  opacity: 0;
+  transform: translateeX(-20px);
+}
+
+.translate-leave-active,
+.translate-enter-active {
+  transition: all .3s;
+}
+
+.translate-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}

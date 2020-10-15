@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+Vue.config.productionTip = false
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
+
+import './styles/index.scss'
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -28,7 +31,7 @@ const apps = [
 registerMicroApps(apps);
 
 start({
-  prefetch: false // 取消预加载
+  prefetch: false, // 取消预加载
 });
 
 new Vue({

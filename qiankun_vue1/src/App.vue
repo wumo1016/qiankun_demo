@@ -1,6 +1,6 @@
 <template>
   <div>
-    <i class="el-icon-edit"></i>
+    <a-icon type="step-backward" />
     <router-view/>
   </div>
 </template>
